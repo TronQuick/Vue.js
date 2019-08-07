@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue列表渲染</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-for="(item,index) of userInfo">
+        {{item}}
+    </div>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            userInfo:[1,2,3,4]
+        }
+    })
+</script>
+</body>
+</html>

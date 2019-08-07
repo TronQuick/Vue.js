@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中的条件渲染</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--当show改变时，Vue会复用<input/>元素，里面的内容不会自动清空，因此要用key值来避免复用，清空input-->
+        <div v-if="show">
+            用户名：<input key="username"/>
+        </div>
+        <div v-else>
+            邮箱名：<input key="password"/>
+        </div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                show:false,
+            },
+            methods:{},
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父子组件的数据传递</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!--通过 :count属性 来完成父组件向子组件的数据传递-->
+        <!--子组件在handleClick中使用$emit触发inc事件，父组件@inc="handleInc"来监听inc事件，并触发父组件中的handleInc方法-->
+        <counter :count="0" @inc="handleInc"></counter>
+        <counter :count="1" @inc="handleInc"></counter>
+        <dvi>{{total}}</dvi>
+    </div>
+    <script>
+        //局部组件,需要注册
+        var counter = {
+            //用props来完成子组件接受父组件的内容
+            props:['count'],
+            data:function() {
+                return{
+                    //避免直接修改父组件传递过来的数据，通过克隆一个副本，再来修改数据
+                    number: this.count
+                }
+            },
+            template: '<div @click="handleClick">{{number}}</div>',
+            methods:{
+                handleClick:function () {
+                    this.number ++
+
+                    //$emit传递的数据，在handleInc中用step来接受
+                    this.$emit('inc', 1)
+                }
+            }
+        }
+
+        var vm = new Vue({
+            el:"#root",
+            data:{
+              total: 0
+            },
+            components:{
+                counter:counter
+            },
+            methods:{
+                handleInc:function (step) {
+                    this.total += step
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

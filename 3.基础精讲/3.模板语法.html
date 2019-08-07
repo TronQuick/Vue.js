@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板语法</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <!-- v-text:显示名为name的数据的值,不解析html语法-->
+        <div v-text="name"></div>
+
+        <!-- v-html：innerHtml 名为name的数据，解析html语法-->
+        <div v-html="name"></div>
+
+        <!--效果和v-text相同-->
+        <div>{{name}}</div>
+    </div>
+
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            data:{
+                name:"<h1>Dell</h1>",
+            },
+        })
+    </script>
+</body>
+</html>

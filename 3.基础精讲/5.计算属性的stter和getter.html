@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性的setter和getter</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{fullName}}
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data:{
+                firstName:"Dell",
+                lastName:"Lee",
+            },
+            computed:{
+                fullName:{
+                    get:function () {
+                        return this.firstName+" "+this.lastName
+                    },
+                    set:function (value) {
+                        //在控制台中输入vm.fullName="MIke Wang",
+                        // fullName就会被set为value="Mike Wang"，
+                        console.log("fullName被设置成"+value+"了");
+
+
+
+                        var arr=value.split(" ");
+                        this.firstName = arr[0];
+                        this.lastName = arr[1]
+                        // <= vm.fullName = "Mike wang"
+                        // => "Mike wang"
+                        // <= vm.firstName
+                        // => "Mike"
+                        // <= vm.lastName
+                        // => "wang"
+
+                        //用set方法改变了firstName和lastName，导致get中的计算属性所依赖的值发生改变，导致重新计算并渲染页面
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
