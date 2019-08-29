@@ -1145,3 +1145,63 @@ Vue.component('child',{
     })
 ```
 
+
+
+### 6.在Vue中使用插槽
+
+基本使用：
+
+```html
+<body>
+    <div id="root">
+        <child>
+            <!--插槽-->
+            <h1>Dell</h1>
+        </child>
+    </div>
+    <script>
+        Vue.component('child',{
+            <!--<slot>里面显示的就是父组件向子组件插入的标签的内容，如果没有则显示默认内容-->
+            template:'<div><p>Hello</p><slot>默认内容</slot></div>',
+        })
+
+        var vm = new Vue({
+            el:"#root",
+        })
+    </script>
+</body>
+```
+
+
+
+具名插槽:
+
+```html
+<body>
+    <div id="root">
+        <body-content>
+            <!--通过定义slot属性来自定义插槽内容-->
+            <div slot="header">header</div>
+            <div slot="footer">footer</div>
+        </body-content>
+    </div>
+    <script>
+        Vue.component('body-content',{
+            <!--<slot name="id">来指定插槽内容-->
+            template:'<div>' +
+                        '<slot name="header"></slot>' +
+                        '<div>content</div> ' +
+                        '<slot name="footer"></slot>'+
+                     '</div>',
+        })
+
+        var vm = new Vue({
+            el:"#root",
+        })
+    </script>
+</body>
+```
+
+
+
+### 7.作用域插槽

@@ -7,19 +7,25 @@
 </head>
 <body>
     <div id="root">
-        <child>
-
-        </child>
+        <body-content>
+            <!--通过定义slot属性来自定义插槽内容-->
+            <div slot="header">header</div>
+            <div slot="footer">footer</div>
+        </body-content>
     </div>
     <script>
-        Vue.component('child',{
-            props:['content'],
-            template:'<div><p>hello</p></div>',
+        Vue.component('body-content',{
+            <!--<slot name="id">来指定插槽内容-->
+            template:'<div>' +
+                        '<slot name="header"></slot>' +
+                        '<div>content</div> ' +
+                        '<slot name="footer"></slot>'+
+                     '</div>',
         })
 
         var vm = new Vue({
             el:"#root",
         })
     </script>
-    </body>
+</body>
 </html>
