@@ -1205,3 +1205,45 @@ Vue.component('child',{
 
 
 ### 7.作用域插槽
+
+```html
+<body>
+    <div id="root">
+        <child>
+            <!--父组件向子组件传入作用域插槽（必须由<template>包裹），并说明从子组件接收的数据来自哪里-->
+            <template slot-scope="props">
+                <!--自定义展示-->
+                <li>{{props.item}} - hello</li>
+            </template>
+        </child>
+    </div>
+
+    <script>
+
+        Vue.component('child',{
+            data: function(){
+                return{
+                    list:[1,2,3,4]
+                }
+            },
+            template:
+                '<div>' +
+                    '<ul>' +
+                        '<slot v-for="item of list":item=item></slot>' +
+                    '</ul>' +
+                '</div>'
+        })
+
+        var vm = new Vue({
+            el: '#root'
+        })
+    </script>
+</body>
+```
+
+显示效果:
+
+- 1 - hello
+- 2 - hello
+- 3 - hello
+- 4 - hello
