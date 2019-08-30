@@ -1247,3 +1247,67 @@ Vue.component('child',{
 - 2 - hello
 - 3 - hello
 - 4 - hello
+
+
+
+### 8.动态组件与v-once指令
+
+动态组件:
+
+```html
+<body>
+    <div id="root">
+        <!--自动根据指定数据的变化来的加载对应的组件-->
+        <component :is="type"></component>
+        <button @click="handleBtnClick">change</button>
+    </div>
+
+    <script>
+        Vue.component('child-one',{
+            template:'<div>Child-one</div>'
+        })
+
+        Vue.component('child-two',{
+            template:'<div>Child-two</div>'
+        })
+
+        var vm = new Vue({
+            el: '#root',
+            data: {
+                type: 'child-one'
+            },
+            methods: {
+                handleBtnClick: function () {
+                    this.type = (this.type === 'child-one' ? 'child-two':'child-one');
+                }
+            }
+        })
+    </script>
+</body>
+```
+
+
+
+- 使用v-once把需要复用组件放到内存中,避免重复销毁创建，提高性能
+
+  ```javascript
+  // 其他代码和上面相同，只有此处修改
+  Vue.component('child-one',{
+              template:'<div v-once>Child-one</div>'
+          })
+  
+          Vue.component('child-two',{
+              template:'<div v-once>Child-two</div>'
+          })
+  ```
+
+
+
+
+
+
+
+## Vue 中的动画特效
+
+### 1.Vue中CSS动画原理
+

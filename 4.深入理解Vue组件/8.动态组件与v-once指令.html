@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态组件与v-once指令</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!--自动根据指定数据的变化来的加载对应的组件-->
+<!--        <component :is="type"></component>-->
+        <child-one v-if="type === 'child-one'"></child-one>
+        <child-two v-if="type === 'child-two'"></child-two>
+        <button @click="handleBtnClick">change</button>
+    </div>
+
+    <script>
+        // 使用v-once把需要复用组件放到内存中,避免重复销毁创建，提高性能
+        Vue.component('child-one',{
+            template:'<div v-once>Child-one</div>'
+        })
+
+        Vue.component('child-two',{
+            template:'<div v-once>Child-two</div>'
+        })
+
+        var vm = new Vue({
+            el: '#root',
+            data: {
+                type: 'child-one'
+            },
+            methods: {
+                handleBtnClick: function () {
+                    this.type = (this.type === 'child-one' ? 'child-two':'child-one');
+                }
+            }
+        })
+    </script>
+</body>
+</html>
