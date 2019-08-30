@@ -1751,7 +1751,7 @@ CSS动画封装:
 
 js动画封装:
 
-```
+```html
 <script src="./vue.js"></script>
 <script src="./velocity.min.js"></script>
 ```

@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7e4ddaf-8014-4cf4-9436-ae17878fa5f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/4.Vue中的js动画和Velocity.js的结合.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5.Vue中多个元素或组件的过渡.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6.Vue中的列表过渡.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7.Vue中的动画封装.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.Vue中CSS动画原理.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.Vue中CSS动画原理.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.在Vue中使用animate.css库.html" beforeDir="false" afterPath="$PROJECT_DIR$/2.在Vue中使用animate.css库.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3.Vue中同时使用过渡和动画.html" beforeDir="false" afterPath="$PROJECT_DIR$/3.同时使用vue过渡效果和animate动画.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-    </list>
+    <list default="true" id="a7e4ddaf-8014-4cf4-9436-ae17878fa5f7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -27,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/7.Vue中的动画封装.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+            <state relative-caret-position="441">
+              <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -36,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/4.Vue中的js动画和Velocity.js的结合.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            <state relative-caret-position="477">
+              <caret line="30" column="14" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -69,9 +58,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
-    <option name="width" value="953" />
-    <option name="height" value="1038" />
+    <option name="x" value="201" />
+    <option name="y" value="38" />
+    <option name="width" value="1188" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -131,7 +121,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567128888626</updated>
-      <workItem from="1567128890028" duration="21390000" />
+      <workItem from="1567128890028" duration="22156000" />
     </task>
     <task id="LOCAL-00001" summary="afternoon">
       <created>1567140107082</created>
@@ -144,14 +134,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21390000" />
+    <option name="totallyTimeSpent" value="22156000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="2" width="950" height="827" extended-state="0" />
+    <frame x="161" y="31" width="950" height="827" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28118163" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3539945" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
@@ -224,15 +214,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/4.Vue中的js动画和Velocity.js的结合.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="477">
+          <caret line="30" column="14" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/7.Vue中的动画封装.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+        <state relative-caret-position="441">
+          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
         </state>
       </provider>
     </entry>
