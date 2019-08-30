@@ -903,7 +903,7 @@ vm.$set(vm.list,1,5)
   <component :count="1"><component>
   ```
 
-  在子组件用props来接受父组件传递过来的数据
+  在子组件用props来接收父组件传递过来的数据
 
   ```javascript
   var component = {
@@ -916,7 +916,7 @@ vm.$set(vm.list,1,5)
 
   
 
-**避免直接修改 **父组件传递给子组件** 的数据，以防止影响其他组件对此数据的使用（**单向数据流概念**）*
+避免直接修改 **父组件传递给子组件** 的数据，以防止影响其他组件对此数据的使用（**单向数据流概念**）
 
 
 
@@ -1367,4 +1367,443 @@ style:
 
 
 
-### 2.在Vue中使用animate.css库
+### 2.Vue中使用animate.css库
+
+在animate官网预览动画效果
+
+通过 **更改enter-active-class / leave-active-class** 来加入效果
+
+前提已引入animate.css:
+
+`<link rel="stylesheet" type="text/css" href="./animate.css">`
+
+```html
+<transition
+    enter-active-class="animated fadeIn"
+    leave-active-class="animated fadeOut">
+    <p v-if="show">hello</p>
+</transition>
+```
+
+
+
+### 3.同时使用Vue过渡动画和animate动画
+
+通过添加 `appear`和`appear-active-class`属性，让页面第一次显示元素时也有动画效果
+
+```html
+<transition
+	appear
+	appear-active-class="animated fadeIn"
+	enter-active-class="animated fadeIn"
+	leave-active-class="animated fadeOut"
+	 >
+    <p v-if="show">hello</p>
+</transition>
+```
+
+
+
+同时使用过渡动画和animate动画:
+
+```html
+<style>
+    .fade-enter,
+    .fade-leave-to{
+    opacity: 0%;
+    }
+    .fade-enter-active,
+    .fade-leave-active{
+    transition: opacity .3s;
+    }
+</style>    
+```
+
+
+
+- 通过type="transition"来将两个动画的时长一起设定为“transition定义的动画时长”（animated默认时长可能较短）
+
+```html
+<transition
+	type="transition"
+	name="fade"
+	appear
+	appear-active-class="animated fadeInRight"
+	enter-active-class="animated fadeInRight fade-enter-active"
+	leave-active-class="animated fadeOutRight fade-leave-active"
+	>
+    <p v-if="show">hello</p>
+</transition>
+```
+
+- 通过`:duration`来设定两个动画的时长，也可以`:duration="{enter:5000,leave:10000}"`这样来分开设定进出场时长
+
+```html
+<transition
+	:duration="10000"
+	name="fade"
+    appear
+    appear-active-class="animated fadeInRight"
+    enter-active-class="animated fadeInRight fade-enter-active"
+   	leave-active-class="animated fadeOutRight fade-leave-active"
+     >
+    <p v-if="show">hello</p>
+</transition>
+```
+
+
+
+### 4.Vue中的js动画和Velocity.js的结合
+
+利用 vue中js动画钩子来自定义动画
+
+- `@before-enter="handleBeforeEnter"
+  @enter="handleEnter"
+  @after-enter="handleAfterEnter">`
+
+- `@before-leave="handleBeforeLeave"
+  @leave="handleLeave"
+  @after-leave="handleAfterLeave">`
+
+```html
+显示效果：点击按钮后，div中字的颜色：红 -> 两秒后：绿 -> 再两秒后:蓝
+
+<div id="root">
+    <button @click="show = !show">
+        Toggle
+    </button>
+    <transition
+            name="fade"
+            @before-enter="handleBeforeEnter"
+            @enter="handleEnter"
+            @after-enter="handleAfterEnter">
+        <p v-if="show">hello</p>
+    </transition>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#root',
+        data: {
+            show: true
+        },
+        methods: {
+            // 接收到的el参数，为被<transition>包裹的元素
+            handleBeforeEnter: function (el) {
+                el.style.color = 'red'
+            },
+
+            // el同样是被包裹的元素，done是回调参数
+            handleEnter: function (el, done) {
+                // 延时器 2s
+                setTimeout(() => {
+                    el.style.color = 'green'
+                }, 2000)
+                
+                // 延时器 4s
+                setTimeout(() => {
+                    // 通知Vue，动画执行完毕
+                    done()
+                }, 4000)
+            },
+
+            // 当enter的done()被调用后，执行after-enter
+            handleAfterEnter: function (el) {
+                el.style.color = "blue"
+            }
+        }
+    })
+</script>
+```
+
+
+
+**使用Velocity.js动画库**
+
+```html
+<head>
+    <script src="./vue.js"></script>
+    <script src="./velocity.min.js"></script> 
+</head>
+<body>
+    <div id="root">
+        <button @click="show = !show">
+            Toggle
+        </button>
+        <transition
+                name="fade"
+                @before-enter="handleBeforeEnter"
+                @enter="handleEnter"
+                @after-enter="handleAfterEnter">
+            <p v-if="show">hello</p>
+        </transition>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#root',
+            data: {
+                show: true
+            },
+            methods: {
+                handleBeforeEnter: function (el) {
+                    el.style.opacity = 0;
+                },
+
+                handleEnter: function (el, done) {
+                    // 需要在complete中执行done回调函数
+                    Velocity(el,
+                        {opacity:1},
+                        {duration:1000,
+                        complete:done})
+                },
+
+                handleAfterEnter: function (el) {
+                    alert("动画结束")
+                }
+            }
+        })
+    </script>
+</body>
+```
+
+
+
+### 5.Vue中多个元素或组件的过渡
+
+- 多个元素的过渡效果
+
+```html
+<style>
+    .v-enter ,
+    .v-leave-to {
+        opacity: 0;
+    }
+
+    .v-enter-active,
+    .v-leave-active {
+        transition: opacity .5s;
+    }
+</style>
+<!--通过设置mode="in-out" “等显示动画进行完后再进行隐藏动画”（原本是同时进行）,"out-in"则相反-->
+<transition mode="out-in">
+    <!--通过key值，避免vue复用元素，让每次动画都可以重复渲染出现-->
+    <p v-if="show" key="hello">hello</p>
+    <p v-else key="bye">Bye World</p>
+</transition>
+```
+
+
+
+- 利用动态组件完成多个组件的过渡
+
+```html
+<style>
+.v-enter ,
+.v-leave-to {
+opacity: 0;
+}
+
+.v-enter-active,
+.v-leave-active {
+transition: opacity .5s;
+}
+</style>
+
+<body>
+<div id="root">
+    <button @click="handleClick">
+        Toggle
+    </button>
+    <transition mode="out-in">
+        <component :is="type"></component>
+    </transition>
+</div>
+<script>
+
+    Vue.component('child',{
+        template:'<div>child</div>'
+    })
+
+    Vue.component('child-one',{
+        template:'<div>child-one</div>'
+    })
+
+    var vm = new Vue({
+        el: '#root',
+        data: {
+            type: 'child'
+        },
+        methods: {
+            handleClick: function () {
+                this.type = this.type === 'child' ? 'child-one' : 'child';
+            }
+        }
+    })
+</script>
+```
+
+
+
+### 6.Vue中的列表过渡
+
+```html
+<style>
+    .v-enter ,
+    .v-leave-to {
+    opacity: 0;
+    }
+
+    .v-enter-active,
+    .v-leave-active {
+    transition: opacity .5s;
+    }
+</style>
+<body>
+
+    <div id="root">
+        <button @click="add">Add</button>
+
+        <transition-group>
+            <div v-for="item of list" :key="item.id">
+                {{item.title}}
+            </div>
+        </transition-group>
+    </div>
+
+    <script>
+        var count = 0;
+
+        var vm = new Vue({
+            el: '#root',
+            data: {
+                list: []
+            },
+            methods: {
+                add: function () {
+                    this.list.push({
+                        id: count++,
+                        title: 'helloWorld'
+                    })
+                }
+            },
+        })
+    </script>
+
+</body>
+```
+
+
+
+### 7.Vue中的动画封装
+
+CSS动画封装:
+
+```html
+<style>
+    .v-enter,
+    .v-leave-to{
+    opacity: 0;
+    }
+    .v-enter-active,
+    .v-leave-active{
+    transition: opacity .5s;
+    }
+</style>
+
+<body>
+<div id="root">
+
+    <button @click="showParent = !showParent">
+        Toggle
+    </button>
+
+    <!--子组件show变量,接收父组件showParent变量-->
+    <fade :show="showParent">
+        <div>hello World</div>
+    </fade>
+
+    <fade :show="showParent">
+        <h1>hello World</h1>
+    </fade>
+
+</div>
+
+<script>
+
+    Vue.component('fade',{
+        props: ['show'],
+        template:
+            '<transition>' +
+                '<slot v-if="show"></slot>' +
+            '</transition>'
+    })
+
+    var vm = new Vue({
+        el: '#root',
+        data: {
+            showParent: true
+        },
+    })
+</script>
+</body>
+```
+
+
+
+js动画封装:
+
+```
+<script src="./vue.js"></script>
+<script src="./velocity.min.js"></script>
+```
+
+```html
+<body>
+<div id="root">
+
+    <button @click="showParent = !showParent">
+        Toggle
+    </button>
+
+    <!--子组件show变量,接收父组件showParent变量-->
+    <fade :show="showParent">
+        <div>hello World</div>
+    </fade>
+    
+
+</div>
+
+<script>
+
+    Vue.component('fade',{
+        props: ['show'],
+        template:
+            '<transition 
+        	@before-enter="handleBeforeEnter" 
+       		@enter="handleEnter">' +
+                '<slot v-if="show"></slot>' +
+            '</transition>',
+        methods: {
+            handleBeforeEnter: function (el) {
+                el.style.opacity = 0;
+            },
+
+            handleEnter: function (el,done) {
+                // 需要在complete中执行done回调函数
+                Velocity(el,
+                    {opacity:1},
+                    {duration:1000,
+                        complete:done})
+            }
+        }
+    })
+
+    var vm = new Vue({
+        el: '#root',
+        data: {
+            showParent: true
+        },
+    })
+</script>
+</body>
+```
+

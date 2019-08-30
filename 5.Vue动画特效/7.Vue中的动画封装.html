@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.Vue中的动画封装</title>
+    <script src="./vue.js"></script>
+    <script src="./velocity.min.js"></script>
+</head>
+<body>
+<div id="root">
+
+    <button @click="showParent = !showParent">
+        Toggle
+    </button>
+
+    <!--子组件show变量,接收父组件showParent变量-->
+    <fade :show="showParent">
+        <div>hello World</div>
+    </fade>
+
+
+</div>
+
+<script>
+
+    Vue.component('fade',{
+        props: ['show'],
+        template:
+            '<transition @before-enter="handleBeforeEnter" @enter="handleEnter">' +
+                '<slot v-if="show"></slot>' +
+            '</transition>',
+        methods: {
+            handleBeforeEnter: function (el) {
+                el.style.opacity = 0;
+            },
+
+            handleEnter: function (el,done) {
+                // 需要在complete中执行done回调函数
+                Velocity(el,
+                    {opacity:1},
+                    {duration:1000,
+                        complete:done})
+            }
+        }
+    })
+
+    var vm = new Vue({
+        el: '#root',
+        data: {
+            showParent: true
+        },
+    })
+</script>
+</body>
+</html>

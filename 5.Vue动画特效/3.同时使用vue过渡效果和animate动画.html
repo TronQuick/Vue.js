@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vue中同时使用过渡和动画</title>
+    <title>3.同时使用vue过渡效果和animate动画</title>
     <script src="./vue.js"></script>
     <link rel="stylesheet" type="text/css" href="./animate.css">
     <style>
@@ -22,9 +22,9 @@
         <button @click="show = !show">
             Toggle
         </button>
-        <!--通过type="transition"来设定两个动画的时长为“我们在transition定义的动画时长”（animated默认时长可能较短）-->
+        <!--通过type="transition"来将两个动画的时长一起设定为“transition定义的动画时长”（animated默认时长可能较短）-->
         <transition
-            type="transition"
+            :duration="{enter:5000,leave:10000}"
             name="fade"
             appear
             appear-active-class="animated fadeInRight"
@@ -39,7 +39,7 @@
         var vm = new Vue({
             el: '#root',
             data: {
-                show: true
+                showBoolean: true
             },
         })
     </script>

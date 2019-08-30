@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7e4ddaf-8014-4cf4-9436-ae17878fa5f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4.Vue中的js动画和Velocity.js的结合.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5.Vue中多个元素或组件的过渡.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.Vue中的列表过渡.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7.Vue中的动画封装.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.Vue中CSS动画原理.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.Vue中CSS动画原理.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.在Vue中使用animate.css库.html" beforeDir="false" afterPath="$PROJECT_DIR$/2.在Vue中使用animate.css库.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.Vue中同时使用过渡和动画.html" beforeDir="false" afterPath="$PROJECT_DIR$/3.同时使用vue过渡效果和animate动画.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,38 +24,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1.Vue中CSS动画原理.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="39" column="7" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="39" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2.在Vue中使用animate.css库.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="30" column="9" lean-forward="true" selection-start-line="10" selection-end-line="30" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/animate.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/3.Vue中同时使用过渡和动画.html">
+        <entry file="file://$PROJECT_DIR$/7.Vue中的动画封装.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="24" column="75" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
+            <state relative-caret-position="357">
+              <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/4.Vue中的js动画和Velocity.js的结合.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -69,14 +60,18 @@
         <option value="$PROJECT_DIR$/1.Vue中CSS动画原理.html" />
         <option value="$PROJECT_DIR$/2.在Vue中使用animate.css库.html" />
         <option value="$PROJECT_DIR$/3.Vue中同时使用过渡和动画.html" />
+        <option value="$PROJECT_DIR$/3.同时使用vue过渡效果和animate动画.html" />
+        <option value="$PROJECT_DIR$/4.Vue中的js动画和Velocity.js的结合.html" />
+        <option value="$PROJECT_DIR$/5.Vue中多个元素或组件的过渡.html" />
+        <option value="$PROJECT_DIR$/6.Vue中的列表过渡.html" />
+        <option value="$PROJECT_DIR$/7.Vue中的动画封装.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="2" />
-    <option name="width" value="1283" />
-    <option name="height" value="1034" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="7" />
+    <option name="width" value="953" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -136,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567128888626</updated>
-      <workItem from="1567128890028" duration="10264000" />
+      <workItem from="1567128890028" duration="21390000" />
     </task>
     <task id="LOCAL-00001" summary="afternoon">
       <created>1567140107082</created>
@@ -149,20 +144,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10264000" />
+    <option name="totallyTimeSpent" value="21390000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-6" y="2" width="950" height="827" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27807134" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28118163" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3294964" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -184,13 +180,6 @@
     <entry file="file://$PROJECT_DIR$/vue.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/1.Vue中CSS动画原理.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="39" column="7" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="39" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/animate.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -200,15 +189,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2.在Vue中使用animate.css库.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="466">
           <caret line="30" column="9" lean-forward="true" selection-start-line="10" selection-end-line="30" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/3.Vue中同时使用过渡和动画.html">
+    <entry file="file://$PROJECT_DIR$/1.Vue中CSS动画原理.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="24" column="75" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
+        <state relative-caret-position="456">
+          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/6.Vue中的列表过渡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/5.Vue中多个元素或组件的过渡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="48" column="9" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3.同时使用vue过渡效果和animate动画.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="44" column="13" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="44" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/4.Vue中的js动画和Velocity.js的结合.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/7.Vue中的动画封装.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
         </state>
       </provider>
     </entry>

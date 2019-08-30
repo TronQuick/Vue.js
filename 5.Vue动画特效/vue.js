@@ -8213,7 +8213,7 @@
       el._enterCb = null;
     });
 
-    if (!vnode.data.show) {
+    if (!vnode.data.showBoolean) {
       // remove pending leave element on enter by injecting an insert hook
       mergeVNodeHook(vnode, 'insert', function () {
         var parent = el.parentNode;
@@ -8248,7 +8248,7 @@
       });
     }
 
-    if (vnode.data.show) {
+    if (vnode.data.showBoolean) {
       toggleDisplay && toggleDisplay();
       enterHook && enterHook(el, cb);
     }
@@ -8334,7 +8334,7 @@
         return
       }
       // record leaving element
-      if (!vnode.data.show && el.parentNode) {
+      if (!vnode.data.showBoolean && el.parentNode) {
         (el.parentNode._pending || (el.parentNode._pending = {}))[(vnode.key)] = vnode;
       }
       beforeLeave && beforeLeave(el);
@@ -8407,7 +8407,7 @@
   }
 
   function _enter (_, vnode) {
-    if (vnode.data.show !== true) {
+    if (vnode.data.showBoolean !== true) {
       enter(vnode);
     }
   }
@@ -8417,7 +8417,7 @@
     activate: _enter,
     remove: function remove$$1 (vnode, rm) {
       /* istanbul ignore else */
-      if (vnode.data.show !== true) {
+      if (vnode.data.showBoolean !== true) {
         leave(vnode, rm);
       } else {
         rm();
@@ -8647,7 +8647,7 @@
 
   var platformDirectives = {
     model: directive,
-    show: show
+    showBoolean: show
   };
 
   /*  */
@@ -8719,7 +8719,7 @@
 
   var isNotTextNode = function (c) { return c.tag || isAsyncPlaceholder(c); };
 
-  var isVShowDirective = function (d) { return d.name === 'show'; };
+  var isVShowDirective = function (d) { return d.name === 'showBoolean'; };
 
   var Transition = {
     name: 'transition',
@@ -8797,10 +8797,10 @@
       var oldRawChild = this._vnode;
       var oldChild = getRealChild(oldRawChild);
 
-      // mark v-show
+      // mark v-showBoolean
       // so that the transition module can hand over the control to the directive
       if (child.data.directives && child.data.directives.some(isVShowDirective)) {
-        child.data.show = true;
+        child.data.showBoolean = true;
       }
 
       if (
