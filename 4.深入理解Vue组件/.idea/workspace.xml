@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef69f1b5-d58d-40f2-b6cc-09c4f1feea4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/8.动态组件与v-once指令.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../5.Vue动画特效/.idea/5.Vue动画特效.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../5.Vue动画特效/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../5.Vue动画特效/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../5.Vue动画特效/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../5.Vue动画特效/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../5.Vue动画特效/1.Vue中CSS动画原理.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../5.Vue动画特效/vue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/8.动态组件与v-once指令.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="24" column="10" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="24" selection-end-column="10" />
+            <state relative-caret-position="85">
+              <caret line="13" column="55" lean-forward="true" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -70,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="3" />
     <option name="y" value="7" />
     <option name="width" value="1192" />
@@ -147,17 +152,24 @@
       <option name="project" value="LOCAL" />
       <updated>1567069358665</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成第四章学习">
+      <created>1567128790704</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567128790704</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34862000" />
+    <option name="totallyTimeSpent" value="35877000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="6" width="953" height="827" extended-state="0" />
+    <frame x="3" y="6" width="953" height="827" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.4002181" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23118865" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -168,7 +180,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299712" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32921347" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -181,7 +193,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Vue 插槽" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vue 插槽" />
+    <MESSAGE value="完成第四章学习" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成第四章学习" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/1.使用组件的细节点.html">
@@ -235,8 +248,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/8.动态组件与v-once指令.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="24" column="10" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="24" selection-end-column="10" />
+        <state relative-caret-position="85">
+          <caret line="13" column="55" lean-forward="true" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
         </state>
       </provider>
     </entry>

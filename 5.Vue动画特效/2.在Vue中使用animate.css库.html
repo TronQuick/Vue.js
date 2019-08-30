@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在Vue中使用animate.css库</title>
+    <script src="./vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="./animate.css">
+</head>
+<body>
+
+<div id="root">
+
+    <button @click="show = !show">
+        Toggle
+    </button>
+    <!--通过更改enter-active-class/leave-active-class来更换效果（前提时已引入animate.css）-->
+    <transition
+            enter-active-class="animated fadeInLeft"
+            leave-active-class="animated fadeOutRight">
+        <p v-if="show">hello</p>
+    </transition>
+</div>
+
+<script>
+    var vm = new Vue({
+        el: '#root',
+        data: {
+            show: true
+        },
+    })
+</script>
+
+</body>
+</html>

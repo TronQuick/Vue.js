@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中同时使用过渡和动画</title>
+    <script src="./vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="./animate.css">
+    <style>
+        .fade-enter,
+        .fade-leave-to{
+            opacity: 0%;
+        }
+        .fade-enter-active,
+        .fade-leave-active{
+            transition: opacity .3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+
+        <button @click="show = !show">
+            Toggle
+        </button>
+        <!--通过type="transition"来设定两个动画的时长为“我们在transition定义的动画时长”（animated默认时长可能较短）-->
+        <transition
+            type="transition"
+            name="fade"
+            appear
+            appear-active-class="animated fadeInRight"
+            enter-active-class="animated fadeInRight fade-enter-active"
+            leave-active-class="animated fadeOutRight fade-leave-active"
+        >
+            <p v-if="show">hello</p>
+        </transition>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#root',
+            data: {
+                show: true
+            },
+        })
+    </script>
+</body>
+</html>

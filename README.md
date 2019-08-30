@@ -41,7 +41,7 @@
 
 ### MVVM设计模式
 
-![MVVM](C:\Users\Tron\Desktop\JavaWeb\vue.js\MVVM.png)
+![MVVM](.\MVVM.png)
 
 
 
@@ -160,7 +160,7 @@ new Vue({
 
 lifecycle图示：
 
-![lifecycle](C:\Users\Tron\Desktop\JavaWeb\vue.js\lifecycle.png)
+![lifecycle](.\lifecycle.png)
 
 
 
@@ -1311,3 +1311,60 @@ Vue.component('child',{
 
 ### 1.Vue中CSS动画原理
 
+过渡动画原理
+
+![CSS动画原理](.\动画原理.png)
+
+![CSS动画原理2](.\动画原理2.png)
+
+leave-active和enter-active监听enter和leave-to，一旦enter/leave-to变化，自动生成过渡动画
+
+
+
+Vue 提供了 `transition` 的封装组件，在下列情形中，可以给任何元素和组件添加进入/离开过渡**
+
+- 条件渲染 (使用 `v-if`)
+- 条件展示 (使用 `v-show`)
+- 动态组件
+- 组件根节点
+
+
+
+**典型例子**
+
+```html
+<!--页面效果：点击button，<transition>内的元素淡出淡入-->
+style:
+    .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+    }
+
+<body>
+ <div id="root">
+
+     <button @click="show = !show">
+         Toggle
+     </button>
+
+     <transition name="fade">
+         <p v-if="show">hello</p>
+     </transition>
+        
+ </div>
+ <script>
+     var vm = new Vue({
+         el: '#root',
+         data: {
+             show: true
+         },
+     })
+</script>
+</body>
+```
+
+
+
+### 2.在Vue中使用animate.css库
