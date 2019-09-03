@@ -41,7 +41,7 @@
 
 ### MVVM设计模式
 
-![MVVM](.\MVVM.png)
+![MVVM](MVVM.png)
 
 
 
@@ -160,7 +160,7 @@ new Vue({
 
 lifecycle图示：
 
-![lifecycle](.\lifecycle.png)
+![lifecycle]lifecycle.png)
 
 
 
