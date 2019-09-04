@@ -1807,3 +1807,117 @@ js动画封装:
 </body>
 ```
 
+
+
+## Vue单文件组件与路由
+
+- 以`.vue`结尾的是单文件组件，如`App.vue`
+
+- **路由就是根据网址的不同，返回不同的内容给用户**
+
+**根组件`App.vue`文件结构：**
+
+```html
+<!--模板-->
+<template>
+  <div id="app">
+    <img src="./assets/logo.png">
+      
+    <!--路由视图标签-->
+    <!--显示的是当前路由地址对应的内容-->
+    <router-view/>
+      
+  </div>
+</template>
+
+<!--组件逻辑-->
+<script>
+export default {
+  name: 'App'
+}
+</script>
+
+<!--CSS样式-->
+<style>
+#app {...}
+</style>
+```
+
+
+
+router下index.js:
+
+```javascript
+import Vue from 'vue'
+import Router from 'vue-router'
+// 从src/components/HelloWorld下引入 HelloWorld组件
+import HelloWorld from '@/components/HelloWorld'
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      // 根路径下
+      path: '/',
+      name: 'HelloWorld',
+      // 使用HelloWorld组件  
+      component: HelloWorld
+    }, {
+      // 根路径/list下加载List组件
+      path: '/list',
+      name: 'list',
+      component: List
+    }
+  ]
+})
+```
+
+
+
+## travel项目依赖
+
+- fast Click 解决移动端300ms点击延迟的问题
+- stylus方便CSS编写
+
+
+
+**shell:**
+
+```powershell
+cd travel
+npm install fastclick --save
+
+npm install stylus --save
+npm install stylus-loader --save
+```
+
+
+
+**main.js:**
+
+```javascript
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+// 引用fastClick
+import fastClick from 'fastclick'
+// 引用移动端css文件
+import './assets/styles/reset.css'
+import './assets/styles/border.css'
+
+Vue.config.productionTip = false
+// 使用fastClick
+fastClick.attach(document.body)
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router: router,
+  components: { App: App },
+  template: '<App/>'
+})
+```
+
+
+
