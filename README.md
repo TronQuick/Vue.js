@@ -41,7 +41,7 @@
 
 ### MVVM设计模式
 
-![MVVM](MVVM.png)
+![MVVM](docs/img/MVVM.png)
 
 
 
@@ -160,7 +160,7 @@ new Vue({
 
 lifecycle图示：
 
-![lifecycle](lifecycle.png)
+![lifecycle](docs/img/lifecycle.png)
 
 
 
@@ -1313,9 +1313,9 @@ Vue.component('child',{
 
 过渡动画原理
 
-![CSS动画原理](动画原理.png)
+![CSS动画原理](docs/img/动画原理.png)
 
-![CSS动画原理2](动画原理2.png)
+![CSS动画原理2](docs/img/动画原理2.png)
 
 leave-active和enter-active监听enter和leave-to，一旦enter/leave-to变化，自动生成过渡动画
 
