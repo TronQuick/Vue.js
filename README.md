@@ -1,7 +1,5 @@
 # vue.js
 
-
-
 ## Hello World
 
 ```html
