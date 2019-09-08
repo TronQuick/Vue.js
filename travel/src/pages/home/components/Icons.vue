@@ -20,67 +20,21 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         autoplay: false
-      },
-      iconList: [{
-        id: '0001',
-        imgUrl: 'https://imgs.qunarzz.com/vc/fd/55/94/6c7152c2a8b35a9c49bb26ea25.png_92.png',
-        desc: '主题游'
-      }, {
-        id: '0002',
-        imgUrl: 'https://imgs.qunarzz.com/vc/eb/d9/1b/e24bca3f1ef6ae6ebdee15e4ca.png_92.png',
-        desc: '徒步登山'
-      }, {
-        id: '0003',
-        imgUrl: 'https://imgs.qunarzz.com/vc/eb/d9/1b/e24bca3f1ef6ae6ebdee15e4ca.png_92.png',
-        desc: '深度游'
-      }, {
-        id: '0004',
-        imgUrl: 'https://imgs.qunarzz.com/vc/c3/f2/54/2e1c8f9403de1ed28895c9ffa4.png_92.png',
-        desc: '亲子游'
-      }, {
-        id: '0005',
-        imgUrl: 'https://imgs.qunarzz.com/vc/68/4a/91/b7f09964d1e7a6280cca361c46.png_92.png',
-        desc: '潜水'
-      }, {
-        id: '0006',
-        imgUrl: 'https://imgs.qunarzz.com/vc/77/21/6b/64a35f4ab3ab1fad57731edb3d.png_92.png',
-        desc: '高空玩乐'
-      }, {
-        id: '0007',
-        imgUrl: 'https://imgs.qunarzz.com/vc/fd/55/94/6c7152c2a8b35a9c49bb26ea25.png_92.png',
-        desc: '主题游'
-      }, {
-        id: '0008',
-        imgUrl: 'https://imgs.qunarzz.com/vc/eb/d9/1b/e24bca3f1ef6ae6ebdee15e4ca.png_92.png',
-        desc: '徒步登山'
-      }, {
-        id: '0009',
-        imgUrl: 'https://imgs.qunarzz.com/vc/eb/d9/1b/e24bca3f1ef6ae6ebdee15e4ca.png_92.png',
-        desc: '深度游'
-      }, {
-        id: '0010',
-        imgUrl: 'https://imgs.qunarzz.com/vc/c3/f2/54/2e1c8f9403de1ed28895c9ffa4.png_92.png',
-        desc: '亲子游'
-      }, {
-        id: '0011',
-        imgUrl: 'https://imgs.qunarzz.com/vc/68/4a/91/b7f09964d1e7a6280cca361c46.png_92.png',
-        desc: '潜水'
-      }, {
-        id: '0012',
-        imgUrl: 'https://imgs.qunarzz.com/vc/77/21/6b/64a35f4ab3ab1fad57731edb3d.png_92.png',
-        desc: '高空玩乐'
-      }]
+      }
     }
   },
   computed: {
     // eslint-disable-next-line vue/return-in-computed-property
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []

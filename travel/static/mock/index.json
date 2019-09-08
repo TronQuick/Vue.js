@@ -3,55 +3,64 @@
   "data": {
     "city": "东莞",
     "swiperList": [{
-        "id": "0001",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1801/1a/94428c6dea109402.jpg_640x200_2cf590d8.jpg"
-      },{
-        "id": "0002",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1802/42/7c92b9a381e46402.jpg_640x200_1cdce2a4.jpg"
-      },{
-        "id": "0003",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1802/51/e78f936a5b404102.jpg_640x200_c14f0b3a.jpg"
-      },{
-        "id": "0004",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1712/91/a275569091681d02.jpg_640x200_0519ccb9.jpg"
-      }],
+      "id": "0001",
+      "imgUrl": "https://source.qunarzz.com/site/images/wns/20190903_qunar_dujia_750x192_6_V1.jpg"
+    }, {
+      "id": "0002",
+      "imgUrl": "https://source.qunarzz.com/site/images/wns/20190819_750x192_11685.jpg"
+    }, {
+      "id": "0003",
+      "imgUrl": "https://source.qunarzz.com/site/images/wns/20190815_750x192_11527.jpg"
+    }],
     "iconList": [{
-        "id": "0001",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
-        "desc": "景点门票"
-      }, {
-        "id": "0002",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1711/df/86cbcfc533330d02.png",
-        "desc": "滑雪季"
-      }, {
-        "id": "0003",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png",
-        "desc": "泡温泉"
-      }, {
-        "id": "0004",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
-        "desc": "动植园"
-      }, {
-        "id": "0005",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
-        "desc": "游乐园"
-      }, {
-        "id": "0006",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
-        "desc": "必游榜单"
-      }, {
-        "id": "0007",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/17/4bd370f3eb1acd02.png",
-        "desc": "演出"
-      }, {
-        "id": "0008",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/7f/b1ea3c8c7fb6db02.png",
-        "desc": "城市观光"
-      }, {
-        "id": "0009",
-        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
-        "desc": "一日游"
-      }],
+      "id": "0001",
+      "imgUrl": "https://imgs.qunarzz.com/vc/fd/55/94/6c7152c2a8b35a9c49bb26ea25.png_92.png",
+      "desc": "主题游"
+    }, {
+      "id": "0002",
+      "imgUrl": "https://imgs.qunarzz.com/vc/eb/d9/1b/e24bca3f1ef6ae6ebdee15e4ca.png_92.png",
+      "desc": "徒步登山"
+    }, {
+      "id": "0003",
+      "imgUrl": "https://imgs.qunarzz.com/vc/eb/d9/1b/e24bca3f1ef6ae6ebdee15e4ca.png_92.png",
+      "desc": "深度游"
+    }, {
+      "id": "0004",
+      "imgUrl": "https://imgs.qunarzz.com/vc/c3/f2/54/2e1c8f9403de1ed28895c9ffa4.png_92.png",
+      "desc": "亲子游"
+    }, {
+      "id": "0005",
+      "imgUrl": "https://imgs.qunarzz.com/vc/68/4a/91/b7f09964d1e7a6280cca361c46.png_92.png",
+      "desc": "潜水"
+    }, {
+      "id": "0006",
+      "imgUrl": "https://imgs.qunarzz.com/vc/77/21/6b/64a35f4ab3ab1fad57731edb3d.png_92.png",
+      "desc": "高空玩乐"
+    }, {
+      "id": "0007",
+      "imgUrl": "https://imgs.qunarzz.com/vc/fd/55/94/6c7152c2a8b35a9c49bb26ea25.png_92.png",
+      "desc": "主题游"
+    }, {
+      "id": "0008",
+      "imgUrl": "https://imgs.qunarzz.com/vc/eb/d9/1b/e24bca3f1ef6ae6ebdee15e4ca.png_92.png",
+      "desc": "徒步登山"
+    }, {
+      "id": "0009",
+      "imgUrl": "https://imgs.qunarzz.com/vc/eb/d9/1b/e24bca3f1ef6ae6ebdee15e4ca.png_92.png",
+      "desc": "深度游"
+    }, {
+      "id": "0010",
+      "imgUrl": "https://imgs.qunarzz.com/vc/c3/f2/54/2e1c8f9403de1ed28895c9ffa4.png_92.png",
+      "desc": "亲子游"
+    }, {
+      "id": "0011",
+      "imgUrl": "https://imgs.qunarzz.com/vc/68/4a/91/b7f09964d1e7a6280cca361c46.png_92.png",
+      "desc": "潜水"
+    }, {
+      "id": "0012",
+      "imgUrl": "https://imgs.qunarzz.com/vc/77/21/6b/64a35f4ab3ab1fad57731edb3d.png_92.png",
+      "desc": "高空玩乐"
+    }],
     "recommendList": [{
         "id": "0001",
         "imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg",
