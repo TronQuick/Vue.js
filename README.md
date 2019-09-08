@@ -1873,6 +1873,58 @@ export default new Router({
 
 
 
+## axios发送ajax请求
+
+```shell
+npm install axios --save
+```
+
+- **GET:**
+
+```javascript
+//通过给定的ID来发送请求
+axios.get('/user?ID=12345')
+  .then(function(response){
+    console.log(response);
+  })
+  .catch(function(err){
+    console.log(err);
+  });
+//以上请求也可以通过这种方式来发送
+axios.get('/user',{
+  params:{
+    ID:12345
+  }
+})
+.then(function(response){
+  console.log(response);
+})
+.catch(function(err){
+  console.log(err);
+});
+```
+
+
+
+- **POST:**
+
+```javascript
+axios.post('/user',{
+  firstName:'Fred',
+  lastName:'Flintstone'
+})
+.then(function(res){
+  console.log(res);
+})
+.catch(function(err){
+  console.log(err);
+});
+```
+
+
+
+
+
 ## travel项目依赖
 
 - **fastClick** 解决移动端300ms点击延迟的问题
