@@ -1,6 +1,24 @@
-# vue.js
+**库导航 & 笔记**
 
-## Hello World
+- **库导航**
+
+| path     | comment                |
+| -------- | ---------------------- |
+| demo     | 学习过程所写demo       |
+| docs     | 文档文件               |
+| lib      | 课程依赖               |
+| travel   | 实战项目demo           |
+| 课程源码 | 课程提供的实战项目源码 |
+
+
+
+- **笔记目录：**
+
+[TOC]
+
+
+
+## Vue Hello World
 
 ```html
 <body>
@@ -1922,63 +1940,6 @@ axios.post('/user',{
 ```
 
 
-
-
-
-## travel项目依赖
-
-- **fastClick** 解决移动端300ms点击延迟的问题
-- **stylus**方便CSS编写
-- **vueAwesomeSwiper@2.6.7稳定版本** 实现图片轮播
-
-
-
-**shell:**
-
-```powershell
-cd travel
-# fastclick
-npm install fastclick --save
-
-# stylus
-npm install stylus --save
-npm install stylus-loader --save
-
-#
-npm install vue-awesome-swiper@2.6.7 --save
-```
-
-
-
-**main.js:**
-
-```javascript
-import Vue from 'vue'
-import App from './App'
-import router from './router'
-// 引用fastClick
-import fastClick from 'fastclick'
-// 引用适配移动端的css文件
-import './assets/styles/reset.css'
-import './assets/styles/border.css'
-// vue-awesome-swiper
-import VueAwesomeSwiper from 'vue-awesome-swiper'
-// require styles
-import 'swiper/dist/css/swiper.css'
-
-
-Vue.config.productionTip = false
-// 使用fastClick
-fastClick.attach(document.body)
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router: router,
-  components: { App: App },
-  template: '<App/>'
-})
-```
 
 
 
