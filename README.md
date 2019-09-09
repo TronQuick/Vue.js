@@ -1,4 +1,4 @@
-**库导航 & 笔记导航**
+*库导航 & 笔记导航**
 
 **库导航**
 
@@ -1951,6 +1951,46 @@ axios.post('/user',{
 ```
 
 
+
+- **响应组成**
+
+```javascript
+// response由以下几部分信息组成(res.data)
+{
+  // 服务端返回的数据
+  data: {}, // res.data.data
+
+  // 服务端返回的状态码
+  status: 200, // res.data.status
+
+  // 服务端返回的状态信息
+  statusText: 'OK',
+
+  // 响应头
+  // 所有的响应头名称都是小写
+  headers: {},
+
+  // axios请求配置
+  config: {},
+
+  // 请求
+  request: {}
+```
+
+
+
+- 用`then`接收以下响应信息
+
+```js
+axios.get('/user/12345')
+  .then(function(response) {
+    console.log(response.data);
+    console.log(response.status);
+    console.log(response.statusText);
+    console.log(response.headers);
+    console.log(response.config);
+  });
+```
 
 
 
