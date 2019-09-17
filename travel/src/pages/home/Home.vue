@@ -56,6 +56,7 @@ export default {
     this.getHomeInfo()
   }
 }
+
 </script>
 
 <style></style>
