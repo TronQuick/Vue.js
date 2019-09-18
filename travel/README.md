@@ -23,6 +23,9 @@ npm install vue-awesome-swiper@2.6.7 --save
 
 #axios
 npm install axios --save
+
+#batterScroll
+npm install better-scroll --save
 ```
 
 
