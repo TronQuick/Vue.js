@@ -9,7 +9,7 @@
 
 **shell:**
 
-```powershell
+```shell
 cd travel
 # fastclick
 npm install fastclick --save
@@ -26,6 +26,10 @@ npm install axios --save
 
 #batterScroll
 npm install better-scroll --save
+
+#vuex
+npm install vuex --save
+
 ```
 
 

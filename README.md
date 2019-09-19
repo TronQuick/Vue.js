@@ -1994,3 +1994,21 @@ axios.get('/user/12345')
 
 
 
+## Vuex实现数据共享
+
+![vuex](docs/img/vuex.png)
+
+State：数据源
+
+
+
+**安装**
+
+```shell
+npm install vuex --save
+```
+
+
+
+[vuex官方文档阅读](https://vuex.vuejs.org/zh/guide/mutations.html)
+
