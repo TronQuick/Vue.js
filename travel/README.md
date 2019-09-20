@@ -18,18 +18,20 @@ npm install fastclick --save
 npm install stylus --save
 npm install stylus-loader --save
 
-#vue-awesome-swiper
+# vue-awesome-swiper
 npm install vue-awesome-swiper@2.6.7 --save
 
-#axios
+# axios
 npm install axios --save
 
-#batterScroll
+# batterScroll
 npm install better-scroll --save
 
-#vuex
+# vuex
 npm install vuex --save
 
+# babel-polyfill
+npm install babel-polyfill --save
 ```
 
 

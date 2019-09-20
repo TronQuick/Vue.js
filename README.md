@@ -2016,7 +2016,7 @@ npm install vuex --save
 
 
 
-# 编程式的导航
+## 编程式的导航
 
 除了使用 `<router-link>` 创建 a 标签来定义导航链接，我们还可以借助 router 的实例方法，通过编写代码来实现。
 
@@ -2051,3 +2051,30 @@ router.push({ name: 'user', params: { userId: '123' }})
 // 带查询参数，变成 /register?plan=private
 router.push({ path: 'register', query: { plan: 'private' }})
 ```
+
+
+
+## 前后端联调
+
+VUE项目中package.json文件中,
+
+在script - dev 中添加-- host 0.0.0.0后，后端部署在本地局域网内
+
+```
+"scripts": {
+    "dev": "webpack-dev-server --host 0.0.0.0 --inline --progress --config build/webpack.dev.conf.js"}
+```
+
+
+
+## 项目打包上线
+
+```shell
+npm run build
+```
+
+完成后在项目目录中会生成dist文件夹，里面的内容为上线内容,放到后端项目根目录即可
+
+
+
+- 通过修改vue项目/config/index.js .build .assetsPublicPath属性来改变上线后的访问地址
