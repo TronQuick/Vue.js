@@ -2079,6 +2079,4 @@ npm run build
 
 完成后在项目目录中会生成dist文件夹，里面的内容为上线内容,放到后端项目根目录即可
 
-
-
-- 通过修改vue项目/config/index.js .build .assetsPublicPath属性来改变上线后的访问地址
+- 可以通过修改vue项目/config/index.js .build .assetsPublicPath属性来改变上线后的访问地址
