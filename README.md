@@ -189,7 +189,7 @@ new Vue({
 
 
 
-lifecycle图示：
+**lifecycle图示：**
 
 ![lifecycle](docs/img/lifecycle.png)
 
