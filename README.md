@@ -12,7 +12,7 @@
 
 
 
-**笔记目录导航：**
+**笔记导航：**
 
 - [Hello World](#Vue-Hello-World)
 - [Vue实例](#Vue实例)
