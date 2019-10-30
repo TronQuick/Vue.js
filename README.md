@@ -49,7 +49,7 @@
         Vue.component('item',{
             template:'<div>这里是item组件</div>'
         })
-        
+       
         // 根Vue实例
         var vm=new Vue({
             el:'#root',//选择ID为root的标签
